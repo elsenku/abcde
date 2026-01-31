@@ -1,3 +1,4 @@
+
 <?php
 include 'koneksi.php';
 if (isset($_GET['kembalikan'])) {
@@ -9,10 +10,10 @@ if (isset($_GET['kembalikan'])) {
         tgl_kembali = '$tgl_sekarang', 
         jam_kembali = '$jam_sekarang', 
         status = 'Kembali' 
-        WHERE id = '$id'"); // Pastikan 'id' sesuai dengan primary key tabelmu
+        WHERE id = '$id'");
     
     if ($update) {
-       //header("Location: " . $_SERVER['PHP_SELF']);
+       header("Location: " . $_SERVER['PHP_SELF']);
     }
 }
 $data = mysqli_query($koneksi, "SELECT * FROM peminjaman");
@@ -25,7 +26,6 @@ if (!$data) {
 <tr>
     <th>No</th>
     <th>Nama</th>
-    <th>id</th>
     <th>Kelas</th>
     <th>Barang</th>
     <th>Qty</th>
@@ -43,7 +43,6 @@ while($d = mysqli_fetch_array($data)) {
 <tr>
     <td><?= $no++ ?></td>
     <td><?= $d['nama_peminjam'] ?></td>
-    <td><?= $d['id'] ?></td>
     <td><?= $d['kelas'] ?></td>
     <td><?= $d['barang'] ?></td>
     <td><?= $d['qty'] ?></td>

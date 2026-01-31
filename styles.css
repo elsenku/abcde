@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 480px;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    color: #1a1a1a;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #4a4a4a;
+    margin-bottom: 8px;
+    margin-left: 4px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+select {
+    width: 100%;
+    padding: 14px 18px;
+    font-size: 15px;
+    font-family: inherit;
+    background-color: #f9f9fb;
+    border: 2px solid #f0f0f2;
+    border-radius: 16px;
+    color: #1a1a1a;
+    transition: all 0.3s ease;
+}
+
+input::placeholder {
+    color: #b5b5b5;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #6366f1;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.row {
+    display: flex;
+    gap: 16px;
+}
+
+.row .form-group {
+    flex: 1;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 16px;
+    border: none;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #4338ca;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(67, 56, 202, 0.2);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+.footer-link {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer-link a {
+    color: #6366f1;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.footer-link a:hover {
+    color: #4338ca;
+    text-decoration: underline;
+}
+
+/* Responsif Mobile */
+@media (max-width: 400px) {
+    .container {
+        padding: 25px;
+    }
+    .row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
